@@ -1,9 +1,231 @@
 /* Definición de la paleta de colores que se va a usar */
 :root{
-    --blanco: #FFFFFF;
-
+  --blanco: #ffffff;
+  --oscuro: #037e6f;
+  --primario: #009988;
+  --fade: #C8E0C4;
+  --secundario: #741481;
+  --gris: #757575;
+  --grisClaro: #DFE9F3;
+  --negro: #000;
+  --Claro: #A0D6BF;
 }
 
 html{
+  font-size: 62.5%;
+  box-sizing: border-box; 
+  scroll-snap-type:y mandatory;
+  overflow-y: scroll;
+}
+.stop {
+  background-color: var(--primario);
+  height: 10rem;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+body {
+  font-size: 16px;
+  font-family: 'Krub', sans-serif;
+}
+/* Tipografías */
+h1 {
+  font-size: 3.8rem;
+  text-align: center;
+}
+h2 {
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h1,h2,h3 {
+  text-align: center;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 4rem;
+    color:var(--oscuro)
+}
+
+.barra{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.enlaces {
+  display: flex;
+  gap: 20px;
+}
+footer{
+  text-align: center;
+}
+.footer-f{
+  background-color:var(--oscuro);;
+  padding: .4rem;
+}
+
+.nav-bg{
+  position: fixed;
+  background-color: var(--oscuro);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  top: 0;
+  left: 0;
+  height: 10rem;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+}
+
+.nav-bg a{
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--blanco);
+  padding: 1rem 2rem;
+    border-radius: 5px;
+
+}
+  
+.nav-bg a:hover{
+    background-color: var(--Claro);
+    color: var(--negro); 
+    cursor:pointer;
+}
+
+.nav-bg a:last-child {
+    margin-right: 2rem;
+}
+
+/* Hero */
+.hero-principal {
+  background-image: url(../IMG/hero.png); 
+  /* .. es para regresar en el directorio */
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  height: calc(100vh - 10rem); /* Altura del viewport menos el margen inferior */
+  /* height: 624px; Alto del Elemento */
+  position: relative; /* El padre debe ser relative*/
+}
+.hero-servicios {
+  background-image: url(../IMG/servicios.png); 
+  /* .. es para regresar en el directorio */
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  height: calc(100vh - 10rem); /* Altura del viewport menos el margen inferior */
+  /* height: 624px; Alto del Elemento */
+  position: relative; /* El padre debe ser relative*/
+}
+.hero-acerca {
+  background-image: url(../IMG/acerca_de.png); 
+  /* .. es para regresar en el directorio */
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  height: calc(100vh - 10rem); /* Altura del viewport menos el margen inferior */
+  /* height: 624px; Alto del Elemento */
+  position: relative; /* El padre debe ser relative*/
+}
+.contenido-hero {
+  position: absolute; /* El hijo debe ser absoluto */
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+  height: 100%;
+  /*Alinear vertical y horizontalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contenido-hero h2, .contenido-hero p {
+  color: var(--blanco);
+}
+
+.texto {
+    display: flex;
+    align-items: flex-end;
+}
+
+.contenido-hero h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 5rem;
+}
+
+.contenido-hero span {
+    color: var(--primario);
+}
+
+.contenido-hero a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--blanco);
+    margin-top: 3rem;
+    background-color: var(--oscuro);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+}
+
+.servicios h3{
+    color: var(--primario);
+}
+
+.servicios p {
+    text-align: center;
+}
+
+.servicios p:hover{
+    background-color: var(--Claro);
+    color: var(--negro); 
+    cursor:pointer;
+    font-size: 20px;
+    display: inline-flex;    
+}
+
+.servicios .icono {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.contenedor .icono{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;  
+}
+
+.contenedor p{
+    text-align: center;
+}
+
+
+/* Estilos para el formulario */
+
+/*Formato para el tam*/
+.formulario{
+    background-color: var(--primario); /*Color del fondo será gris*/
+    width: min(60rem,100%); /*Tmamaño del recuadro para el formulario*/
+    margin: 0 auto; /*Establece el margen del elemento*/
+    padding: 2rem; /*Establece el relleno alrededor del contenido del elemento*/
+    border-radius: 1rem; /*Establece que tan redondeado quieres las esquinas del elemento*/
     
 }
+/* Formato para el titulo dentro del formulario */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Krub', sans-serif;
+}
+
+/*  */
+.texto{
+  align-items: center;
+}
+
