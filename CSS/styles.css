@@ -53,7 +53,7 @@ h1,h2,h3 {
 
 .enlaces {
   display: flex;
-  gap: 20px;
+  gap: 5px;
 }
 footer{
   text-align: center;
@@ -67,8 +67,6 @@ footer{
 .nav-bg{
   position: fixed;
   background-color: var(--oscuro);
-  padding-left: 1rem;
-  padding-right: 1rem;
   top: 0;
   left: 0;
   height: 12vh;
@@ -171,7 +169,18 @@ footer{
     background-color: var(--oscuro);
     padding: 1rem 1.5rem;
     border-radius: 1rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/*Estilo responsivo para el botón de "aprender más"*/
+@media (min-width: 768px) {
+  .contenido-hero a{
+    width: auto;
+  }
+ }
 
 .servicios h3{
     color: var(--primario);
@@ -180,8 +189,6 @@ footer{
 .servicios p {
     text-align: center;
 }
-
-
 
 
 .subtitulo {
@@ -200,9 +207,6 @@ footer{
     text-align: center;
 }
 
-.servicios {
-  display: inline;
-}
 
 .servicios .icono {
   margin: 1rem 0;
@@ -217,6 +221,17 @@ footer{
   justify-content: center;
 }
 
+.titulo-icono{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-icono h3{
+  margin: 1rem;
+}
+
+/*Estilo responsivo para la sección de servicios*/
 @media (min-width: 768px) {
   .servicios {
     padding-top: 2rem;
@@ -241,11 +256,41 @@ footer{
     align-items: center;
     justify-content: center;
   }
-  
+  .servicio{
+    display: flex;
+    align-items: center;
+  }
+
+  .titulo-icono{
+    flex-direction: column;
+  }
 }
 
+/*Estilo responsivo para el menú*/
+@media screen and (max-width: 768px) {
+  .barra {
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    align-items: flex-start; /* Alinea los elementos al principio */
+  }
+
+  .nav-bg {
+    height: auto; /* Ajusta la altura automáticamente según el contenido */
+  }
+
+  .enlaces {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    align-content: center;
+  }
+
+  .nav-bg a:last-child {
+    margin-right: 0;
+  }
+}
 .servicio {
-  display: flex;
   padding: 2rem;
   background-color: var(--blanco);
   border-radius: 2rem;
@@ -257,7 +302,7 @@ footer{
 }
 
 .servicio h3 {
-  font-size: 30px;
+  font-size: 200%;
 }
 
 
@@ -477,30 +522,7 @@ footer{
 
 }
 
-/* .hero-acerca {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 150vh;
-  padding: 6%;
-  
-} */
-
-.contenido-acerca{
-  display: flex;
-  align-items: center; /* Centrar verticalmente los elementos */
+.contenido-hero h2 {
+  margin-top: 3rem;
 }
 
-.icono {
-  margin-right: 10px; /* Añadir espacio a la derecha del icono */
-  margin-bottom: 15px;
-}
-
-.acercaa{
-  margin-bottom: 50px;
-}
-
-.contenido-acerca p {
-  color: var(--blanco);
-  margin-bottom: 10px;
-}
