@@ -164,7 +164,8 @@ footer{
 }
 
 .contenido-hero a {
-    text-decoration: none;
+    text-decoration: 
+    none;
     font-size: 2rem;
     color: var(--blanco);
     margin-top: 3rem;
@@ -200,23 +201,6 @@ footer{
     text-align: center;
 }
 
-.servicios {
-  display: inline;
-}
-
-.servicios .icono {
-  margin: 1rem 0;
-  background-color: var(--fade);
-  border-radius: 50%;
-  width: 8rem;
-  height: 8rem;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
 @media (min-width: 768px) {
   .servicios {
     padding-top: 2rem;
@@ -244,17 +228,6 @@ footer{
   
 }
 
-.servicio {
-  display: flex;
-  padding: 2rem;
-  background-color: var(--blanco);
-  border-radius: 2rem;
-  margin: 2rem;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
 
 .servicio h3 {
   font-size: 30px;
@@ -448,7 +421,16 @@ footer{
   .form{
     width: auto;
   }
+  /* Adjust font sizes for smaller screens if needed */
+  /*.form-header h2 {
+    font-size: 1.6rem;
+  }
 
+  .input-box label,
+  .input-box input,
+  .gender-title h4 {
+    font-size: 1.2rem;
+  }*/
 }
 
 /*Extras formulario*/
@@ -477,14 +459,14 @@ footer{
 
 }
 
-/* .hero-acerca {
+.hero-acerca {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 150vh;
   padding: 6%;
   
-} */
+} 
 
 .contenido-acerca{
   display: flex;
@@ -501,6 +483,10 @@ footer{
 }
 
 .contenido-acerca p {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
   color: var(--blanco);
   margin-bottom: 10px;
+
 }
+
