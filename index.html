@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Veterinaria Colita Feliz</title>
-  <link rel="stylesheet" href="CSS/normalized.css">
-  <link rel="stylesheet" href="CSS/styles.css" as="style">
-  <link rel="preload" href="CSS/styles.css" as="style">
-</head>
+  <head>
+    <!-- Metaetiquetas para la codificación de caracteres y la escala del viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>Veterinaria Colita Feliz</title>
+    <!-- Enlaces a hojas de estilo -->
+    <link rel="stylesheet" href="CSS/normalized.css">
+    <link rel="stylesheet" href="CSS/styles.css" as="style">
+    <link rel="preload" href="CSS/styles.css" as="style">
+  </head>
 <body>
   <main>
     <header>
@@ -16,10 +19,10 @@
           <img src="SVG/Colita Feliz.svg" alt="Colita Feliz" class="logo">
           <!-- <h1 class="titulo">Colita Feliz</h1> -->
           <div class="enlaces">
-            <a href="#">Inicio</a>
-            <a href="#">Servicios</a>
-            <a href="#">Acerca de</a>
-            <a href="#">Contacto</a>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#acercaDe">Acerca de</a>
+            <a href="#contacto">Contacto</a>
           </div>
         </nav>
       </div>
@@ -27,7 +30,7 @@
     <!-- seccion relleno -->
     <div class="stop"></div>
     <!-- fin seccion relleno -->
-    <section class="hero-principal">
+    <section class="hero-principal" id="inicio">
       <div class="contenido-hero">
         <h2>Clínica Veterinaria <span>Colita Feliz<span></h2>
         <div class="texto"> <!-- div ubicación -->
@@ -38,34 +41,32 @@
           </svg>
           <p>Mérida, Yucatán</p>
         </div> <!-- div ubicación -->
-        <a class="boton" href="#">Aprende más...</a>
+        <a class="boton" href="https://banfield.com.mx/blog/articulos-noticias/14-conducta-y-comportamiento/89-diferencias-entre-perros-y-gatos">Aprende más...</a>
+        <div class="info"> Atención solo para perros y gatos </div>
       </div> <!-- div contenido-hero -->
     </section>
     <!-- seccion relleno -->
     <div class="stop"></div>
     <!-- fin seccion relleno -->
-    <section class="hero-servicios">
+    <section class="hero-servicios" id="servicios">
       <div class="contenido-hero">
         <h2 class="subtitulo">Nuestros servicios</h2>
         <div class="servicios">
           <div class="servicio"> 
             <div class="titulo-icono">
-              <!--Icono de consultas-->
+              <!--Icono de estética-->
               <div class="icono">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-stats" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-scissors" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-                  <path d="M18 14v4h4" />
-                  <path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-                  <path d="M15 3v4" />
-                  <path d="M7 3v4" />
-                  <path d="M3 11h16" />
+                  <path d="M6 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                  <path d="M6 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                  <path d="M8.6 8.6l10.4 10.4" />
+                  <path d="M8.6 15.4l10.4 -10.4" />
                 </svg>
               </div> <!--div.icono-->   
-              <h3>Consultas</h3>
+              <h3>Estética</h3>
             </div> <!--div.titulo-icono-->
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            </p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
           </div> <!--Cierre de consulta-->
           
           <div class="servicio">
@@ -104,36 +105,57 @@
             </div> <!--div.titulo-icono-->
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, laudantium</p>
           </div>
-          
         </div>
       </div>
     </section>
     <!-- seccion relleno -->
     <div class="stop"></div>
     <!-- fin seccion relleno -->
-    <section class="hero-acerca">
+    <section class="hero-acerca" id="acercaDe">
       <div class="contenido-hero">
-          <h2>Acerca de nosotros</h2>
-        <div class="contenedor">
-          <div class="contenido-acerca">
-            <h3>¿Quiénes somos?</h3>
-              <p>Somos una clínica veterinaria con más de 10 años de experiencia en el cuidado de tus mascotas.</p>
-          </div>
-          
-          <div class="contenido-acerca">
-            <h3>¿Qué hacemos?</h3>
-            <p>Brindamos servicios de consulta, vacunación, desparasitación, cirugías, estética canina y felina, entre otros.</p>
-          </div>
-          <div class="form-images">
-            <img src="SVG/undraw_good_doggy_re_eet7.svg">
+          <h2 class="subtitulo">Acerca de <span>nosotros</span></h2>
+          <div class="contenedor-acerca">
+
+            <div class="form-images">
+              <img src="SVG/undraw_good_doggy_re_eet7.svg">
+            </div>
+            
+            <div class="texto-acerca">
+              <h3>¿Quiénes somos?</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam laudantium dignissimos esse illo aliquid modi corporis ea delectus labore dolorem maiores, dolore atque totam recusandae, perferendis omnis explicabo temporibus asperiores.</p>
+            </div>
           </div>
       </div>   
     </section> 
+
+    <!-- seccion relleno -->
+    <div class="stop"></div>
+    <!-- fin seccion relleno -->
+    <section class="hero-acerca">
+      <div class="contenido-hero">
+          <h2 class="subtitulo">Acerca de <span>la ubicación</span></h2>
+          <div class="contenedor-acerca-ubicacion">
+            <div class="texto-acerca">
+              <div>
+                <h3>¿Dónde estamos?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam laudantium dignissimos esse illo aliquid modi corporis ea delectus labore dolorem maiores, dolore atque totam recusandae, perferendis omnis explicabo temporibus asperiores.</p>
+              </div>
+            </div>
+
+            <div class="ubicacion">
+              
+            </div>
+            
+            
+          </div>
+      </div>   
+    </section> 
+
   <!-- seccion relleno -->
   <div class="stop"></div>
   <!-- fin seccion relleno -->   
   <!-- HTML del formulario -->
-    <section class="container">
+    <section class="container" id="contacto">
         <div class="form-image">
           <img src="SVG/undraw_dog_c7i6.svg">
         </div>
