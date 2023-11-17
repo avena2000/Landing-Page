@@ -11,97 +11,94 @@
   --Claro: #A0D6BF;
 }
 
-html{
-  font-size: 62.5%;
-  box-sizing: border-box; 
-  scroll-snap-type:y mandatory;
-  overflow-y: scroll;
-  background-color: var(--primario);
+html {
+  font-size: 62.5%; /* Tamaño base de la fuente en 62.5% para facilitar el cálculo en rem */
+  box-sizing: border-box; /* Modelo de caja que incluye contenido, relleno y borde, pero no márgenes */
+  scroll-snap-type: y mandatory; /* Tipo de desplazamiento y obligatorio para alinear con puntos de parada */
+  overflow-y: scroll; /* Desplazamiento vertical y barra de desplazamiento si es necesario */
+  background-color: var(--primario); /* Color de fondo usando variable personalizada */
 }
+
 .stop {
-  background-color: var(--primario);
-  height: 12vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  background-color: var(--primario); /* Color de fondo usando variable personalizada */
+  height: 12vh; /* Altura del 12% del viewport */
+  scroll-snap-align: start; /* Alineación durante desplazamiento suave */
+  scroll-snap-stop: always; /* Punto de parada para desplazamiento suave */
 }
+
 body {
-  font-size: 16px;
-  font-family: 'Krub', sans-serif;
+  font-size: 16px; /* Tamaño de la fuente para el cuerpo del documento */
+  font-family: 'Krub', sans-serif; /* Fuente principal para el cuerpo del documento */
 }
-/* Tipografías */
-h1 {
-  font-size: 3.8rem;
-  text-align: center;
-}
-h2 {
-  font-size: 2.8rem;
-}
+
 h3 {
-  font-size: 1.8rem;
-}
-h1,h2,h3 {
-  text-align: center;
+  font-size: 1.8rem; /* Tamaño de la fuente para h3 */
 }
 
-.titulo{
-    text-align: center;
-    font-size: 4rem;
-    color:var(--oscuro)
+h1, h2, h3 {
+  text-align: center; /* Centra los encabezados h1, h2 y h3 */
 }
 
-
+.titulo {
+  text-align: center; /* Centra el texto del título */
+  font-size: 4rem; /* Tamaño de la fuente para el título */
+  color: var(--oscuro); /* Color del texto usando variable personalizada */
+}
 
 .enlaces {
-  display: flex;
-  gap: 20px;
-}
-footer{
-  text-align: center;
-}
-.footer-f{
-  background-color:var(--oscuro);;
-  height: 3rem;
-  padding: .5rem;
+  display: flex; /* Muestra elementos secundarios en una fila */
+  gap: 5px; /* Espacio entre elementos secundarios */
 }
 
-.nav-bg{
-  position: fixed;
-  background-color: var(--oscuro);
-  padding-left: 1rem;
-  padding-right: 1rem;
-  top: 0;
-  left: 0;
-  height: 12vh;
-  width: 100%;
-  z-index: 1;
-  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
-  -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+footer {
+  text-align: center; /* Centra el contenido del pie de página */
 }
 
-.nav-bg a{
-  text-decoration: none;
-  font-size: 2rem;
-  color: var(--blanco);
-  padding: 1rem 2rem;
-  border-radius: 5px;
-
-}
-.barra{
-  height: 100%;
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-}
-.nav-bg a:hover{
-    background-color: var(--Claro);
-    color: var(--negro); 
-    cursor:pointer;
+.footer-f {
+  background-color: var(--oscuro); /* Color de fondo usando variable personalizada */
+  color: var(--blanco); /* Color del texto usando variable personalizada */
+  padding: 1rem; /* Relleno alrededor del contenido del elemento */
 }
 
+.nav-bg {
+  position: fixed; /* Fija la posición de la barra de navegación */
+  background-color: var(--oscuro); /* Color de fondo usando variable personalizada */
+  top: 0; /* Coloca la barra de navegación en la parte superior de la ventana */
+  height: 12vh; /* Establece la altura de la barra de navegación */
+  width: 100%; /* Establece el ancho al 100% de la ventana */
+  z-index: 1; /* Propiedad z-index para controlar la superposición de elementos */
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5); /* Sombra para la barra de navegación */
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.nav-bg a {
+  text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+  font-size: 2rem; /* Tamaño de la fuente para los enlaces */
+  color: var(--blanco); /* Color del texto usando variable personalizada */
+  padding: 1rem 2rem; /* Relleno alrededor del contenido del enlace */
+  border-radius: 5px; /* Bordes redondeados del enlace */
+}
+
+.barra {
+  height: 100%; /* Establece la altura al 100% de su contenedor */
+  display: flex; /* Muestra elementos secundarios en una fila */
+  justify-content: space-between; /* Distribuye el espacio entre elementos secundarios */
+  align-items: center; /* Alinea los elementos secundarios verticalmente al centro */
+}
+
+/* Estilos para el estado de 'hover' (ratón sobre) de los enlaces en la barra de navegación. */
+.nav-bg a:hover {
+  background-color: var(--Claro); /* Cambia el color de fondo al pasar el ratón sobre el enlace */
+  color: var(--negro); /* Cambia el color del texto al pasar el ratón sobre el enlace */
+  cursor: pointer; /* Cambia el cursor a una mano para indicar interactividad */
+}
+
+/* Estilos para el último elemento hijo (último enlace) dentro de la barra de navegación. */
 .nav-bg a:last-child {
-    margin-right: 2rem;
+  margin-right: 2rem; /* Agrega margen derecho al último enlace para espaciarlo de otros elementos */
 }
+
 
 /* Hero */
 .hero-principal {
@@ -145,92 +142,198 @@ footer{
   align-items: center;
   justify-content: center;
 }
-.contenido-hero h2{
-  color: var(--blanco);
+
+/* Estilos para la clase 'info' dentro de '.contenido-hero'. */
+.contenido-hero .info {
+  color: var(--blanco); /* Color del texto en blanco */
+  margin-top: 2rem; /* Margen superior de 2rem */
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Familia de fuentes */
+  font-size: 3rem; /* Tamaño de la fuente de 3rem */
+  text-align: center; /* Alineación del texto al centro */
+  padding: 1rem; /* Relleno alrededor del contenido de 1rem */
 }
 
-.texto {
-    display: flex;
-    align-items: flex-end;
-}
-
+/* Estilos para el elemento h2 dentro de '.contenido-hero'. */
 .contenido-hero h2 {
-    font-family: 'Pacifico', cursive;
-    font-size: 5rem;
+  color: var(--blanco); /* Color del texto en blanco */
+  font-family: 'Pacifico', cursive; /* Familia de fuentes */
+  font-size: 5rem; /* Tamaño de la fuente de 5rem */
 }
 
+/* Estilos para elementos con la clase 'texto'. */
+.texto {
+  display: flex; /* Muestra los elementos secundarios en una fila */
+  align-items: flex-end; /* Alinea los elementos secundarios en la parte inferior */
+}
+
+/* Estilos para el elemento span dentro de '.contenido-hero'. */
 .contenido-hero span {
-    color: var(--primario);
+  color: var(--primario); /* Color del texto utilizando una variable personalizada */
 }
 
+/* Estilos para enlaces dentro de '.contenido-hero'. */
 .contenido-hero a {
-    text-decoration: 
-    none;
-    font-size: 2rem;
-    color: var(--blanco);
-    margin-top: 3rem;
-    background-color: var(--oscuro);
-    padding: 1rem 1.5rem;
-    border-radius: 1rem;
+  text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+  font-size: 2rem; /* Tamaño de la fuente de 2rem */
+  color: var(--blanco); /* Color del texto en blanco */
+  margin-top: 3rem; /* Margen superior de 3rem */
+  background-color: var(--oscuro); /* Color de fondo utilizando una variable personalizada */
+  padding: 1rem 1.5rem; /* Relleno alrededor del contenido */
+  border-radius: 1rem; /* Bordes redondeados de 1rem */
+  width: 90%; /* Ancho del 90% del contenedor */
+  display: flex; /* Muestra los elementos secundarios en una fila */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
 }
 
-.servicios h3{
-    color: var(--primario);
-}
-
-.servicios p {
-    text-align: center;
-}
-
-
-
-
-.subtitulo {
-  margin-top: 2rem;
-}
-
-.contenedor .icono{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;  
-    justify-content: center;
-}
-
-.contenedor p{
-    text-align: center;
-}
-
+/*Estilo responsivo para el botón de "aprender más"*/
 @media (min-width: 768px) {
-  .servicios {
-    padding-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 1rem;
+  .contenido-hero a{
+    width: auto; /*Que el ancho dependa del contenido*/
   }
-  .icono svg{
-    width: 100px;
-    height: 100px;
+}
+
+/* Estilos para los encabezados h3 dentro de '.servicios'. */
+.servicios h3 {
+  color: var(--primario); /* Color del texto utilizando una variable personalizada */
+}
+
+/* Estilos para los párrafos dentro de '.servicios'. */
+.servicios p {
+  text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilos para elementos con la clase 'subtitulo'. */
+.subtitulo {
+  margin-top: 2rem; /* Margen superior de 2rem */
+}
+
+/* Estilos para elementos con la clase 'contenedor' y la clase 'icono'. */
+.contenedor .icono {
+  display: flex; /* Muestra los elementos secundarios en una columna */
+  flex-direction: column; /* Orientación de columna para flexbox */
+  text-align: center; /* Alineación del texto al centro */
+  align-items: center; /* Alinea los elementos secundarios al centro horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+}
+
+/* Estilos para los párrafos dentro de '.contenedor'. */
+.contenedor p {
+  text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilos para los elementos con la clase 'icono' dentro de '.servicios'. */
+.servicios .icono {
+  margin: 1rem 0; /* Margen superior e inferior de 1rem, margen lateral de 0 */
+  background-color: var(--fade); /* Color de fondo utilizando una variable personalizada */
+  border-radius: 50%; /* Borde redondeado al 50% para formar un círculo */
+  width: 8rem; /* Ancho de 8rem */
+  height: 8rem; /* Altura de 8rem */
+  display: flex; /* Muestra los elementos secundarios en una columna */
+  flex-direction: column; /* Orientación de columna para flexbox */
+  text-align: center; /* Alineación del texto al centro */
+  align-items: center; /* Alinea los elementos secundarios al centro horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+}
+
+/* Estilos para elementos con la clase 'titulo-icono'. */
+.titulo-icono {
+  display: flex; /* Muestra los elementos secundarios en una fila */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Alinea los elementos secundarios al centro verticalmente */
+}
+
+/* Estilos para los encabezados h3 dentro de '.titulo-icono'. */
+.titulo-icono h3 {
+  margin: 1rem; /* Margen de 1rem alrededor del encabezado h3 */
+}
+
+/* Estilos aplicados cuando el ancho de la pantalla es igual o mayor a 768px. */
+@media (min-width: 768px) {
+
+  /* Estilos para '.servicios' dentro de la media query. */
+  .servicios {
+    padding-top: 2rem; /* Relleno superior de 2rem */
+    display: grid; /* Usa un sistema de cuadrícula para organizar los elementos secundarios */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de tamaño igual */
+    column-gap: 1rem; /* Espacio entre columnas de 1rem */
   }
 
-  .servicios .icono {
-    margin: 2rem 0;
-    background-color: var(--fade);
-    border-radius: 50%;
-    width: 15rem;
-    height: 15rem;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+  /* Estilos para los elementos 'svg' dentro de '.icono' dentro de la media query. */
+  .icono svg {
+    width: 100px; /* Ancho de 100px */
+    height: 100px; /* Altura de 100px */
   }
-  
+
+  /* Estilos para '.icono' dentro de '.servicios' dentro de la media query. */
+  .servicios .icono {
+    margin: 2rem 0; /* Margen superior e inferior de 2rem, margen lateral de 0 */
+    background-color: var(--fade); /* Color de fondo utilizando una variable personalizada */
+    border-radius: 50%; /* Borde redondeado al 50% para formar un círculo */
+    width: 15rem; /* Ancho de 15rem */
+    height: 15rem; /* Altura de 15rem */
+    display: flex; /* Muestra los elementos secundarios en una columna */
+    flex-direction: column; /* Orientación de columna para flexbox */
+    text-align: center; /* Alineación del texto al centro */
+    align-items: center; /* Alinea los elementos secundarios al centro horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+  }
+
+  /* Estilos para '.servicio' dentro de la media query. */
+  .servicio {
+    display: flex; /* Muestra los elementos secundarios en una fila */
+    align-items: center; /* Alinea los elementos secundarios al centro verticalmente */
+  }
+
+  /* Estilos para '.titulo-icono' dentro de la media query. */
+  .titulo-icono {
+    flex-direction: column; /* Cambia la orientación de fila a columna para '.titulo-icono' */
+  }
 }
 
 
+/*Estilo responsivo para el menú*/
+@media screen and (max-width: 768px) {
+  .barra {
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    align-items: flex-start; /* Alinea los elementos al principio */
+  }
+
+  .nav-bg {
+    height: auto; /* Ajusta la altura automáticamente según el contenido */
+  }
+
+  /* Estilos para elementos con la clase 'enlaces'. */
+  .enlaces {
+    display: flex; /* Muestra los elementos secundarios en una columna */
+    flex-direction: column; /* Orientación de columna para flexbox */
+    width: 100%; /* Ancho del 100% del contenedor */
+    text-align: center; /* Alineación del texto al centro */
+    margin-top: 10px; /* Margen superior de 10px */
+    align-content: center; /* Alinea el contenido verticalmente al centro */
+  }
+
+/* Estilos para el último enlace dentro de '.nav-bg'. */
+  .nav-bg a:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último enlace */
+  }
+
+}
+/* Estilos para elementos con la clase 'servicio'. */
+.servicio {
+  padding: 2rem; /* Relleno de 2rem alrededor del contenido */
+  background-color: var(--blanco); /* Color de fondo utilizando una variable personalizada */
+  border-radius: 2rem; /* Borde redondeado de 2rem */
+  margin: 2rem; /* Margen exterior de 2rem */
+  align-items: center; /* Alinea los elementos secundarios al centro horizontalmente */
+  justify-content: flex-start; /* Alinea los elementos secundarios al principio del contenedor */
+  flex-wrap: wrap; /* Permite que los elementos secundarios se envuelvan a la siguiente línea si es necesario */
+  flex-direction: column; /* Orientación de columna para flexbox */
+}
+
+/* Estilos para los encabezados h3 dentro de '.servicio'. */
 .servicio h3 {
-  font-size: 30px;
+  font-size: 200%; /* Tamaño de la fuente al 200% del tamaño predeterminado */
 }
 
 
@@ -252,168 +355,203 @@ footer{
   box-sizing: border-box;
   font-family: 'Krub', sans-serif;
 }
-/*body{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #0c0ce94d;
-}*/
+
 /*Características del ccontenedor (recuadro)*/
+/* Estilos para el contenedor principal */
 .container {
-  background-color: var(--blanco);
-  width: 80%;
-  height: calc(100vh - 12vh - 3rem - 8rem);
-  display: flex;
-  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.49);
-  -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.49);
-  -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.49);
-  margin-left: auto; /* Agrega esta línea */
+  background-color: var(--blanco); /* Color de fondo utilizando una variable personalizada */
+  width: 80%; /* Ancho del 80% del contenedor principal */
+  height: calc(100vh - 12vh - 3rem - 8rem); /* Altura calculada excluyendo ciertas partes de la ventana */
+  display: flex; /* Usa flexbox para organizar los elementos secundarios */
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49); /* Sombra utilizando rgba para la opacidad */
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49);
+  margin-left: auto; /* Márgenes automáticos para centrar horizontalmente */
   margin-right: auto;
-  margin-bottom: 4rem;
-  margin-top: 4rem;
-  
-}
-.form-images img{
-  height: 10%;
-  width: auto;
-}
-.form-image{
-  width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--Claro);
-  padding: 1rem;
-}
-.form-image img{
-  width: 80%;
-}
-.form{
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #fff;
-  padding: 3rem;
+  margin-bottom: 4rem; /* Márgen inferior de 4rem */
+  margin-top: 4rem; /* Márgen superior de 4rem */
 }
 
-.form-header{
-  margin-bottom: 3rem;
-  display: flex;
-  justify-content: space-between;
-}
-.login-button{
-  display: flex;
-  align-items: center;
-}
-.login-button button{
-  border: none;
-  background-color: #6c63ff;
-  padding: 0.4rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.login-button button:hover{
-  background-color: #6b63fff1;
-}
-.login-button button a{
-  text-decoration: none;
-  font-weight: 500;
-  color: #fff;
+/* Estilos para las imágenes dentro del formulario */
+.form-images img {
+  height: 80%; /* Altura del 80% del contenedor padre */
+  width: auto; /* Ancho automático */
 }
 
-.form-header h2::after{
-  content: '';
-  display: block;
-  width: 12rem;
-  height: 0.5rem;
-  background-color: #6c63ff;
-  margin: 0 auto;
-  position: absolute;
-  border-radius: 10px;
+/* Estilos para la sección de imágenes del formulario */
+.form-image {
+  width: 70%; /* Ancho del 70% del contenedor padre */
+  display: flex; /* Usa flexbox para organizar los elementos secundarios */
+  justify-content: center; /* Centra horizontalmente los elementos secundarios */
+  align-items: center; /* Centra verticalmente los elementos secundarios */
+  background-color: var(--Claro); /* Color de fondo utilizando una variable personalizada */
+  padding: 1rem; /* Relleno alrededor del contenido de 1rem */
 }
 
-.input-group{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
+/* Estilos para las imágenes dentro de la sección de imágenes del formulario */
+.form-image img {
+  width: 80%; /* Ancho del 80% del contenedor padre */
 }
 
-.input-box{
-  display: flex;
-  flex-direction: column;
-  
+/* Estilos para la sección del formulario */
+.form {
+  width: 30%; /* Ancho del 30% del contenedor padre */
+  display: flex; /* Usa flexbox para organizar los elementos secundarios */
+  justify-content: center; /* Centra horizontalmente los elementos secundarios */
+  align-items: center; /* Centra verticalmente los elementos secundarios */
+  flex-direction: column; /* Orientación de columna para flexbox */
+  background-color: #fff; /* Color de fondo blanco */
+  padding: 3rem; /* Relleno alrededor del contenido de 3rem */
 }
 
-.input-box input{
-  margin: 0.6rem 0.6rem 0.6rem 0;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 1px 1px 6px #000000;
-}
-.input-box input:hover{
-  background-color: #eeeeee75;
-}
-.input-box input:focus-visible{
-  outline: 1px solid #6c63ff;
-}
-.input-box label, .gender-title h4{
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: #000000c0;
-}
-.input-box input::placeholder{
-  color: #000000be
-}
-.gender-group{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.62rem;
-  padding: 0 0.5rem;
+/* Estilos para la cabecera del formulario */
+.form-header {
+  margin-bottom: 3rem; /* Margen inferior de 3rem */
+  display: flex; /* Usa flexbox para organizar los elementos secundarios */
+  justify-content: space-between; /* Espaciado uniforme entre los elementos secundarios */
 }
 
-.gender-input{
-  display: flex;
-  align-items: center;
-}
-.gender-input input{
-  margin-right: 0.35rem;
+/* Estilos para el botón de inicio de sesión */
+.login-button {
+  display: flex; /* Usa flexbox para organizar los elementos secundarios */
+  align-items: center; /* Centra verticalmente los elementos secundarios */
 }
 
-.gender-input label{
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #000000c0;
+/* Estilos para el botón del formulario */
+.login-button button {
+  border: none; /* Sin borde */
+  background-color: #6c63ff; /* Color de fondo azul */
+  padding: 0.4rem 1rem; /* Relleno de 0.4rem en la parte superior e inferior, 1rem en los lados */
+  border-radius: 5px; /* Borde redondeado de 5px */
+  cursor: pointer; /* Cambia el cursor a una mano para indicar interactividad */
 }
-.continue-button{
-  width: 100%;
-  margin-top: 2.5rem;
-}
-.continue-button button{
-  width: 100%;
-  margin-top: 2.5rem;
-  border:none;
-  background-color: #6c63ff;
-  padding: 0.4rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.continue-button button:hover{
-  background-color: #6b63fff1;
-}
-.continue-button button a{
-  text-decoration:  none;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #fff;
 
+/* Estilos para el estado de 'hover' del botón del formulario */
+.login-button button:hover {
+  background-color: #6b63fff1; /* Cambia el color de fondo al pasar el ratón sobre el botón */
 }
+
+/* Estilos para el enlace dentro del botón del formulario */
+.login-button button a {
+  text-decoration: none; /* Sin subrayado predeterminado para el enlace */
+  font-weight: 500; /* Grosor de la fuente 500 */
+  color: #fff; /* Color del texto blanco */
+}
+
+/* Estilos para el título de la cabecera del formulario */
+.form-header h2::after {
+  content: ''; /* Contenido generado */
+  display: block; /* Muestra como bloque */
+  width: 12rem; /* Ancho de 12rem */
+  height: 0.5rem; /* Altura de 0.5rem */
+  background-color: #6c63ff; /* Color de fondo azul */
+  margin: 0 auto; /* Márgenes automáticos a los lados para centrar horizontalmente */
+  position: absolute; /* Posición absoluta con respecto al contenedor padre */
+  border-radius: 10px; /* Borde redondeado de 10px */
+}
+
+/* Estilos para el grupo de entrada en el formulario */
+.input-group {
+  display: flex; /* Usa flexbox para organizar los elementos secundarios */
+  flex-wrap: wrap; /* Permite que los elementos secundarios se envuelvan a la siguiente línea si es necesario */
+  justify-content: center; /* Centra horizontalmente los elementos secundarios */
+  align-items: center; /* Centra verticalmente los elementos secundarios */
+  padding: 1rem 0; /* Relleno de 1rem en la parte superior e inferior */
+}
+
+/* Estilos para la caja de entrada en el formulario */
+.input-box {
+  display: flex; /* Usa flexbox para organizar los elementos secundarios */
+  flex-direction: column; /* Orientación de columna para flexbox */
+}
+
+/* Estilos para la entrada dentro de la caja de entrada en el formulario */
+.input-box input {
+  margin: 0.6rem 0.6rem 0.6rem 0; /* Márgenes alrededor de la entrada */
+  padding: 0.8rem 1.2rem; /* Relleno de 0.8rem en la parte superior e inferior, 1.2rem en los lados */
+  border: none; /* Sin borde */
+  border-radius: 10px; /* Borde redondeado de 10px */
+  box-shadow: 1px 1px 6px #000000; /* Sombra con color rgba para la opacidad */
+}
+
+/* Estilos para el estado de 'hover' de la entrada en el formulario */
+.input-box input:hover {
+  background-color: #eeeeee75; /* Cambia el color de fondo al pasar el ratón sobre la entrada */
+}
+
+/* Estilos para el borde de la entrada cuando está enfocada (visible) */
+.input-box input:focus-visible {
+  outline: 1px solid #6c63ff; /* Borde de 1px sólido en color azul cuando la entrada está enfocada */
+}
+
+/* Estilos para la etiqueta y el título de género */
+.input-box label, .gender-title h4 {
+  font-size: 1.6rem; /* Tamaño de la fuente de 1.6rem */
+  font-weight: 800; /* Grosor de la fuente 800 */
+  color: #000000c0; /* Color del texto con opacidad */
+}
+
+/* Estilos para el marcador de posición de la entrada */
+.input-box input::placeholder {
+  color: #000000be; /* Color del marcador de posición con opacidad */
+}
+
+/* Estilos para el grupo de género */
+.gender-group {
+  display: flex; /* Usa flexbox para organizar los elementos secundarios */
+  justify-content: space-between; /* Espaciado uniforme entre los elementos secundarios */
+  margin-top: 0.62rem; /* Margen superior de 0.62rem */
+  padding: 0 0.5rem; /* Relleno de 0 en la parte superior e inferior, 0.5rem en los lados */
+}
+
+/* Estilos para la entrada de género */
+.gender-input {
+  display: flex; /* Usa flexbox para organizar los elementos secundarios */
+  align-items: center; /* Centra verticalmente los elementos secundarios */
+}
+
+/* Estilos para la entrada de género en el grupo de género */
+.gender-input input {
+  margin-right: 0.35rem; /* Margen derecho de 0.35rem */
+}
+
+/* Estilos para la etiqueta de la entrada de género */
+.gender-input label {
+  font-size: 1.4rem; /* Tamaño de la fuente de 1.4rem */
+  font-weight: 600; /* Grosor de la fuente 600 */
+  color: #000000c0; /* Color del texto con opacidad */
+}
+
+/* Estilos para el botón de continuar */
+.continue-button {
+  width: 100%; /* Ancho del 100% del contenedor padre */
+  margin-top: 2.5rem; /* Margen superior de 2.5rem */
+}
+
+/* Estilos para el botón dentro de la sección de continuar */
+.continue-button button {
+  width: 100%; /* Ancho del 100% del contenedor padre */
+  margin-top: 2.5rem; /* Margen superior de 2.5rem */
+  border: none; /* Sin borde */
+  background-color: #6c63ff; /* Color de fondo azul */
+  padding: 0.4rem 1rem; /* Relleno de 0.4rem en la parte superior e inferior, 1rem en los lados */
+  border-radius: 5px; /* Borde redondeado de 5px */
+  cursor: pointer; /* Cambia el cursor a una mano para indicar interactividad */
+}
+
+/* Estilos para el estado de 'hover' del botón de continuar */
+.continue-button button:hover {
+  background-color: #6b63fff1; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+}
+
+/* Estilos para el enlace dentro del botón de continuar */
+.continue-button button a {
+  text-decoration: none; /* Sin subrayado predeterminado para el enlace */
+  font-size: 1.2rem; /* Tamaño de la fuente de 1.2rem */
+  font-weight: 500; /* Grosor de la fuente 500 */
+  color: #fff; /* Color del texto blanco */
+}
+
 @media screen and (max-width:768px){
   .form-image{
     display: none;
@@ -434,59 +572,203 @@ footer{
 }
 
 /*Extras formulario*/
+/* Transición de color de fondo para botones de inicio de sesión y continuar */
 .login-button button, .continue-button button {
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Transición suave de 0.3 segundos para el cambio de color de fondo */
 }
+
+/* Sombra para el formulario */
 .form {
-  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.1); /* Sombra con color rgba para la opacidad */
 }
+
+/* Estilos para el contenedor principal */
 .container {
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 10px; /* Borde redondeado de 10px */
+  overflow: hidden; /* Oculta el desbordamiento de contenido fuera del contenedor */
 }
 
-/*  */
-.texto{
-  align-items: center;
-  color: var(--blanco);
+/* Estilos para el texto */
+.texto {
+  align-items: center; /* Alinea los elementos secundarios al centro verticalmente */
+  color: var(--blanco); /* Color del texto utilizando una variable personalizada */
 }
 
+/* Estilos para el título en la sección "Acerca de" */
 .contenido-acerca h3 {
-  font-family: 'Pacifico', cursive;
-  font-size: 3rem;
-  color: var(--blanco);
-  margin-bottom: 10px;
-
+  font-family: 'Pacifico', cursive; /* Fuente específica */
+  font-size: 3rem; /* Tamaño de la fuente de 3rem */
+  color: var(--blanco); /* Color del texto utilizando una variable personalizada */
+  margin-bottom: 10px; /* Margen inferior de 10px */
 }
 
-.hero-acerca {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 150vh;
-  padding: 6%;
-  
-} 
-
-.contenido-acerca{
-  display: flex;
-  align-items: center; /* Centrar verticalmente los elementos */
+/* Estilos para el contenedor "Acerca de" */
+.contenedor-acerca {
+  display: block; /* Muestra como bloque */
+  background-color: var(--Claro); /* Color de fondo utilizando una variable personalizada */
+  margin: 2rem; /* Márgenes de 2rem */
+  border-radius: 10px; /* Borde redondeado de 10px */
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); /* Sombra con color rgba para la opacidad */
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
-.icono {
-  margin-right: 10px; /* Añadir espacio a la derecha del icono */
-  margin-bottom: 15px;
+/* Estilos para las imágenes en el contenedor "Acerca de" */
+.contenedor-acerca .form-images img {
+  width: 50%; /* Ancho del 50% del contenedor padre */
+  height: 50%; /* Altura del 50% del contenedor padre */
 }
 
-.acercaa{
-  margin-bottom: 50px;
+/* Estilos para la sección de imágenes en el contenedor "Acerca de" */
+.contenedor-acerca .form-images {
+  display: flex; /* Usa flexbox para organizar los elementos secundarios */
+  justify-content: center; /* Centra horizontalmente los elementos secundarios */
+  align-items: center; /* Centra verticalmente los elementos secundarios */
+  margin: 2rem; /* Márgenes de 2rem */
 }
 
-.contenido-acerca p {
-  font-family: 'Pacifico', cursive;
-  font-size: 2rem;
-  color: var(--blanco);
-  margin-bottom: 10px;
-
+/* Estilos para el texto en la sección "Acerca de" */
+.contenedor-acerca .texto-acerca {
+  text-align: center; /* Alineación del texto al centro */
+  padding: 2rem; /* Relleno de 2rem alrededor del contenido */
+  background-color: var(--blanco); /* Color de fondo utilizando una variable personalizada */
+  border-radius: 0 0 10px 10px; /* Borde redondeado específico */
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); /* Sombra con color rgba para la opacidad */
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
+/* Estilos para el título en la sección de texto en "Acerca de" */
+.contenedor-acerca .texto-acerca h3 {
+  margin-bottom: 2rem; /* Margen inferior de 2rem */
+  font-size: 30px; /* Tamaño de la fuente de 30px */
+  color: var(--oscuro); /* Color del texto utilizando una variable personalizada */
+  font-weight: bold; /* Grosor de la fuente en negrita */
+  font-family: Georgia, 'Times New Roman', Times, serif; /* Fuente específica */
+}
+
+/* Estilos responsivos para dispositivos móviles en la sección "Acerca de" */
+@media (min-width: 768px) {
+  .contenedor-acerca {
+    margin-top: 2rem; /* Margen superior de 2rem */
+    display: grid; /* Usa un sistema de cuadrícula para organizar los elementos secundarios */
+    grid-template-columns: 1fr 1fr; /* Dos columnas de tamaño igual */
+    gap: 5%; /* Espacio entre columnas del 5% */
+    align-items: center; /* Alinea los elementos secundarios al centro verticalmente */
+    justify-items: end; /* Justifica los elementos secundarios al final del contenedor */
+    width: 80%; /* Ancho del 80% del contenedor padre */
+    background-color: var(--Claro); /* Color de fondo utilizando una variable personalizada */
+    border-radius: 10px; /* Borde redondeado de 10px */
+  }
+
+  /* Estilos para las imágenes en dispositivos móviles en la sección "Acerca de" */
+  .contenedor-acerca .form-images img {
+    padding: 2rem; /* Relleno de 2rem alrededor del contenido */
+    width: 100%; /* Ancho del 100% del contenedor padre */
+    height: 100%; /* Altura del 100% del contenedor padre */
+  }
+
+  /* Estilos para la sección de texto en dispositivos móviles en "Acerca de" */
+  .contenedor-acerca .texto-acerca {
+    display: flex; /* Usa flexbox para organizar los elementos secundarios */
+    padding: 3rem; /* Relleno de 3rem alrededor del contenido */
+    background-color: var(--blanco); /* Color de fondo utilizando una variable personalizada */
+    height: 100%; /* Altura del 100% del contenedor padre */
+    border-radius: 50% 10px 10px 50%; /* Borde redondeado específico */
+    padding: 20px; /* Relleno de 20px */
+    align-items: center; /* Alinea los elementos secundarios al centro verticalmente */
+    justify-content: center; /* Centra horizontalmente los elementos secundarios */
+    flex-direction: column; /* Orientación de columna para flexbox */
+    width: 100%; /* Ancho del 100% del contenedor padre */
+  }
+
+  /* Estilos para el párrafo en dispositivos móviles en la sección de texto en "Acerca de" */
+  .contenedor-acerca .texto-acerca p {
+    display: flex; /* Usa flexbox para organizar los elementos secundarios */
+    text-align: right; /* Alineación del texto a la derecha */
+  }
+}
+
+ /* Estilos para el contenedor "Acerca de Ubicación" */
+.contenedor-acerca-ubicacion {
+  display: block; /* Muestra como bloque */
+  background-color: var(--fade); /* Color de fondo utilizando una variable personalizada */
+  margin: 2rem; /* Márgenes de 2rem */
+  border-radius: 10px; /* Borde redondeado de 10px */
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); /* Sombra con color rgba para la opacidad */
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* Estilos para las imágenes en el contenedor "Acerca de Ubicación" */
+.contenedor-acerca-ubicacion .form-images img {
+  width: 50%; /* Ancho del 50% del contenedor padre */
+  height: 50%; /* Altura del 50% del contenedor padre */
+}
+
+/* Estilos para la sección de imágenes en el contenedor "Acerca de Ubicación" */
+.contenedor-acerca-ubicacion .form-images {
+  display: flex; /* Usa flexbox para organizar los elementos secundarios */
+  justify-content: center; /* Centra horizontalmente los elementos secundarios */
+  align-items: center; /* Centra verticalmente los elementos secundarios */
+  margin: 2rem; /* Márgenes de 2rem */
+}
+
+/* Estilos para el texto en la sección "Acerca de Ubicación" */
+.contenedor-acerca-ubicacion .texto-acerca {
+  text-align: center; /* Alineación del texto al centro */
+  padding: 2rem; /* Relleno de 2rem alrededor del contenido */
+  background-color: var(--blanco); /* Color de fondo utilizando una variable personalizada */
+  border-radius: 10px 10px 0 0; /* Borde redondeado específico */
+}
+
+/* Estilos para el título en la sección de texto en "Acerca de Ubicación" */
+.contenedor-acerca-ubicacion .texto-acerca h3 {
+  margin-bottom: 2rem; /* Margen inferior de 2rem */
+  font-size: 30px; /* Tamaño de la fuente de 30px */
+  color: var(--oscuro); /* Color del texto utilizando una variable personalizada */
+  font-weight: bold; /* Grosor de la fuente en negrita */
+  font-family: Georgia, 'Times New Roman', Times, serif; /* Fuente específica */
+}
+
+/* Estilo responsivo para dispositivos móviles en la sección "Acerca de Ubicación" */
+@media (min-width: 768px) {
+  .contenedor-acerca-ubicacion {
+    margin-top: 2rem; /* Margen superior de 2rem */
+    display: grid; /* Usa un sistema de cuadrícula para organizar los elementos secundarios */
+    grid-template-columns: 1fr 1fr; /* Dos columnas de tamaño igual */
+    gap: 5%; /* Espacio entre columnas del 5% */
+    align-items: center; /* Alinea los elementos secundarios al centro verticalmente */
+    justify-items: end; /* Justifica los elementos secundarios al final del contenedor */
+    width: 80%; /* Ancho del 80% del contenedor padre */
+    background-color: var(--fade); /* Color de fondo utilizando una variable personalizada */
+    border-radius: 10px; /* Borde redondeado de 10px */
+  }
+
+  /* Estilos para las imágenes en dispositivos móviles en la sección "Acerca de Ubicación" */
+  .contenedor-acerca-ubicacion .form-images img {
+    padding: 2rem; /* Relleno de 2rem alrededor del contenido */
+    width: 100%; /* Ancho del 100% del contenedor padre */
+    height: 100%; /* Altura del 100% del contenedor padre */
+  }
+
+  /* Estilos para la sección de texto en dispositivos móviles en "Acerca de Ubicación" */
+  .contenedor-acerca-ubicacion .texto-acerca {
+    display: flex; /* Usa flexbox para organizar los elementos secundarios */
+    padding: 3rem; /* Relleno de 3rem alrededor del contenido */
+    background-color: var(--blanco); /* Color de fondo utilizando una variable personalizada */
+    height: 100%; /* Altura del 100% del contenedor padre */
+    border-radius: 10px 0 0 10px; /* Borde redondeado específico */
+    padding: 20px; /* Relleno de 20px */
+    align-items: center; /* Alinea los elementos secundarios al centro verticalmente */
+    justify-content: center; /* Centra horizontalmente los elementos secundarios */
+    flex-direction: column; /* Orientación de columna para flexbox */
+    width: 100%; /* Ancho del 100% del contenedor padre */
+  }
+
+  /* Estilos para el párrafo en dispositivos móviles en la sección de texto en "Acerca de Ubicación" */
+  .contenedor-acerca-ubicacion .texto-acerca p {
+    display: flex; /* Usa flexbox para organizar los elementos secundarios */
+    text-align: left; /* Alineación del texto a la izquierda */
+  }
+}
