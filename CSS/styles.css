@@ -55,9 +55,19 @@ footer {
 }
 
 .footer-f {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 3vh;
   background-color: var(--oscuro); /* Color de fondo usando variable personalizada */
   color: var(--blanco); /* Color del texto usando variable personalizada */
-  padding: 1rem; /* Relleno alrededor del contenido del elemento */
+}
+
+.footer-f p{
+  background-color: var(--oscuro); /* Color de fondo usando variable personalizada */
+  color: var(--blanco); /* Color del texto usando variable personalizada */
+/* Relleno alrededor del contenido del elemento */
 }
 
 .nav-bg {
@@ -123,6 +133,16 @@ footer {
 }
 .hero-acerca {
   background-image: url(../IMG/acerca_de.png); 
+  /* .. es para regresar en el directorio */
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  height: calc(100vh - 12vh); /* Altura del viewport menos el margen inferior */
+  /* height: 624px; Alto del Elemento */
+  position: relative; /* El padre debe ser relative*/
+}
+.hero-ubicacion {
+  background-image: url(../IMG/ubicacion.png); 
   /* .. es para regresar en el directorio */
   background-repeat: no-repeat;
   background-size:cover;
@@ -295,9 +315,13 @@ footer {
 /*Estilo responsivo para el menú*/
 @media screen and (max-width: 768px) {
   .barra {
+    height: 12vh;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
     align-items: flex-start; /* Alinea los elementos al principio */
+    justify-content: center;
+    align-content: center;
   }
+
 
   .nav-bg {
     height: auto; /* Ajusta la altura automáticamente según el contenido */
@@ -305,7 +329,7 @@ footer {
 
   /* Estilos para elementos con la clase 'enlaces'. */
   .enlaces {
-    display: flex; /* Muestra los elementos secundarios en una columna */
+    display: none; /* Muestra los elementos secundarios en una columna */
     flex-direction: column; /* Orientación de columna para flexbox */
     width: 100%; /* Ancho del 100% del contenedor */
     text-align: center; /* Alineación del texto al centro */
@@ -329,6 +353,9 @@ footer {
   justify-content: flex-start; /* Alinea los elementos secundarios al principio del contenedor */
   flex-wrap: wrap; /* Permite que los elementos secundarios se envuelvan a la siguiente línea si es necesario */
   flex-direction: column; /* Orientación de columna para flexbox */
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49); /* Sombra utilizando rgba para la opacidad */
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49);
 }
 
 /* Estilos para los encabezados h3 dentro de '.servicio'. */
@@ -380,7 +407,7 @@ footer {
 
 /* Estilos para la sección de imágenes del formulario */
 .form-image {
-  width: 70%; /* Ancho del 70% del contenedor padre */
+  width: 70vw; /* Ancho del 70% del contenedor padre */
   display: flex; /* Usa flexbox para organizar los elementos secundarios */
   justify-content: center; /* Centra horizontalmente los elementos secundarios */
   align-items: center; /* Centra verticalmente los elementos secundarios */
@@ -395,7 +422,7 @@ footer {
 
 /* Estilos para la sección del formulario */
 .form {
-  width: 30%; /* Ancho del 30% del contenedor padre */
+  width: 40vw; /* Ancho del 30% del contenedor padre */
   display: flex; /* Usa flexbox para organizar los elementos secundarios */
   justify-content: center; /* Centra horizontalmente los elementos secundarios */
   align-items: center; /* Centra verticalmente los elementos secundarios */
@@ -406,7 +433,7 @@ footer {
 
 /* Estilos para la cabecera del formulario */
 .form-header {
-  margin-bottom: 3rem; /* Margen inferior de 3rem */
+  margin-bottom: 2vh; /* Margen inferior de 3rem */
   display: flex; /* Usa flexbox para organizar los elementos secundarios */
   justify-content: space-between; /* Espaciado uniforme entre los elementos secundarios */
 }
@@ -525,7 +552,7 @@ footer {
 /* Estilos para el botón de continuar */
 .continue-button {
   width: 100%; /* Ancho del 100% del contenedor padre */
-  margin-top: 2.5rem; /* Margen superior de 2.5rem */
+  margin-top: 1vh; /* Margen superior de 2.5rem */
 }
 
 /* Estilos para el botón dentro de la sección de continuar */
@@ -608,9 +635,9 @@ footer {
   background-color: var(--Claro); /* Color de fondo utilizando una variable personalizada */
   margin: 2rem; /* Márgenes de 2rem */
   border-radius: 10px; /* Borde redondeado de 10px */
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); /* Sombra con color rgba para la opacidad */
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49); /* Sombra utilizando rgba para la opacidad */
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49);
 }
 
 /* Estilos para las imágenes en el contenedor "Acerca de" */
@@ -633,10 +660,7 @@ footer {
   padding: 2rem; /* Relleno de 2rem alrededor del contenido */
   background-color: var(--blanco); /* Color de fondo utilizando una variable personalizada */
   border-radius: 0 0 10px 10px; /* Borde redondeado específico */
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); /* Sombra con color rgba para la opacidad */
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
+} */
 
 /* Estilos para el título en la sección de texto en "Acerca de" */
 .contenedor-acerca .texto-acerca h3 {
@@ -676,16 +700,20 @@ footer {
     height: 100%; /* Altura del 100% del contenedor padre */
     border-radius: 50% 10px 10px 50%; /* Borde redondeado específico */
     padding: 20px; /* Relleno de 20px */
-    align-items: center; /* Alinea los elementos secundarios al centro verticalmente */
+    align-items: end; /* Alinea los elementos secundarios a la derecha */
     justify-content: center; /* Centra horizontalmente los elementos secundarios */
     flex-direction: column; /* Orientación de columna para flexbox */
     width: 100%; /* Ancho del 100% del contenedor padre */
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49); /* Sombra utilizando rgba para la opacidad */
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49);
+    
   }
-
   /* Estilos para el párrafo en dispositivos móviles en la sección de texto en "Acerca de" */
   .contenedor-acerca .texto-acerca p {
     display: flex; /* Usa flexbox para organizar los elementos secundarios */
     text-align: right; /* Alineación del texto a la derecha */
+    margin-top: 10px;
   }
 }
 
@@ -695,9 +723,11 @@ footer {
   background-color: var(--fade); /* Color de fondo utilizando una variable personalizada */
   margin: 2rem; /* Márgenes de 2rem */
   border-radius: 10px; /* Borde redondeado de 10px */
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); /* Sombra con color rgba para la opacidad */
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49); /* Sombra utilizando rgba para la opacidad */
+  padding: 1rem;
+  gap: 10px;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.49);
 }
 
 /* Estilos para las imágenes en el contenedor "Acerca de Ubicación" */
@@ -735,12 +765,10 @@ footer {
 @media (min-width: 768px) {
   .contenedor-acerca-ubicacion {
     margin-top: 2rem; /* Margen superior de 2rem */
-    display: grid; /* Usa un sistema de cuadrícula para organizar los elementos secundarios */
-    grid-template-columns: 1fr 1fr; /* Dos columnas de tamaño igual */
-    gap: 5%; /* Espacio entre columnas del 5% */
+    display: flex; /* Usa un sistema de cuadrícula para organizar los elementos secundarios */
     align-items: center; /* Alinea los elementos secundarios al centro verticalmente */
     justify-items: end; /* Justifica los elementos secundarios al final del contenedor */
-    width: 80%; /* Ancho del 80% del contenedor padre */
+    width: max-content; /* Ancho del 80% del contenedor padre */
     background-color: var(--fade); /* Color de fondo utilizando una variable personalizada */
     border-radius: 10px; /* Borde redondeado de 10px */
   }
@@ -758,17 +786,21 @@ footer {
     padding: 3rem; /* Relleno de 3rem alrededor del contenido */
     background-color: var(--blanco); /* Color de fondo utilizando una variable personalizada */
     height: 100%; /* Altura del 100% del contenedor padre */
-    border-radius: 10px 0 0 10px; /* Borde redondeado específico */
+    border-radius: 10px; /* Borde redondeado específico */
     padding: 20px; /* Relleno de 20px */
     align-items: center; /* Alinea los elementos secundarios al centro verticalmente */
     justify-content: center; /* Centra horizontalmente los elementos secundarios */
     flex-direction: column; /* Orientación de columna para flexbox */
-    width: 100%; /* Ancho del 100% del contenedor padre */
+    width: 40vw; /* Ancho del 100% del contenedor padre */
   }
 
   /* Estilos para el párrafo en dispositivos móviles en la sección de texto en "Acerca de Ubicación" */
   .contenedor-acerca-ubicacion .texto-acerca p {
     display: flex; /* Usa flexbox para organizar los elementos secundarios */
-    text-align: left; /* Alineación del texto a la izquierda */
+    text-align: center; /* Alineación del texto a la izquierda */
+  }
+  .ubicacion {
+    width: auto;
+    height: auto;
   }
 }
