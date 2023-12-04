@@ -549,13 +549,13 @@ footer {
 }
 
 /* Estilos para el botón de continuar */
-.continue-button {
+.continue-button input {
   width: 100%; /* Ancho del 100% del contenedor padre */
   margin-top: 1vh; /* Margen superior de 2.5rem */
 }
 
 /* Estilos para el botón dentro de la sección de continuar */
-.continue-button button {
+.continue-button input {
   width: 100%; /* Ancho del 100% del contenedor padre */
   margin-top: 2.5rem; /* Margen superior de 2.5rem */
   border: none; /* Sin borde */
@@ -566,12 +566,12 @@ footer {
 }
 
 /* Estilos para el estado de 'hover' del botón de continuar */
-.continue-button button:hover {
+.continue-button input:hover {
   background-color: #6b63fff1; /* Cambia el color de fondo al pasar el ratón sobre el botón */
 }
 
 /* Estilos para el enlace dentro del botón de continuar */
-.continue-button button a {
+.continue-button input a {
   text-decoration: none; /* Sin subrayado predeterminado para el enlace */
   font-size: 1.2rem; /* Tamaño de la fuente de 1.2rem */
   font-weight: 500; /* Grosor de la fuente 500 */
